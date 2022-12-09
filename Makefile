@@ -17,14 +17,11 @@ clean:
 	rm $(FNAME)
 
 syn: 
+	@echo "Generating a new syntaxer."
 	$(CC) $(SYN).cpp $(FLAGS) -o $(SYN).o 
 	./$(SYN).o $(FNAME).cpp
-	cat temp_*
 
 file: 
-	@echo "sed: removing trailing whitespaces"
-	# sed 's/ //g' $(FILE).cpp
-
 	@echo "Running syntaxer on $(FILE).cpp ... "
 	./$(SYN).o $(FILE).cpp
 	
@@ -32,4 +29,4 @@ file:
 	$(CC) temp_$(FILE).cpp $(FLAGS) -o $(FILE).o
    	
 	@echo "cleaning up"
-	rm temp*	
+	rm temp_*	
