@@ -52,6 +52,7 @@ inline void input(T& t, Args... args)
 
 // syntactic sugar 
 #define if if( 
+#define while while(
 #define then )
 #define begin {
 #define end }

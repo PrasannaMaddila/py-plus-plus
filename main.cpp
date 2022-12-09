@@ -23,4 +23,14 @@ begin
         _print(elem); 
     end
     print();
+    
+    print("Decrementing your number in a while loop ..."); 
+    while var_x > 0 then 
+    begin 
+        _print(var_x); 
+        _print(" "); 
+
+        var_x --;
+    end
+    print(); 
 end 
