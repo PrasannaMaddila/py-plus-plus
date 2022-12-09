@@ -19,6 +19,12 @@ template<typename T>
 inline void _print(T& t){
     std::cout << t ; 
 }
+// for multiple words without newlines 
+template<typename T, typename... Args>
+inline void _print(T& t, Args... args){
+    std::cout << t ; 
+    _print(args...);
+}
 
 // for one word + newline 
 template<typename T>
@@ -51,12 +57,15 @@ inline void input(T& t, Args... args)
 
 
 // syntactic sugar 
+#define var auto 
+#define ref auto& 
 #define if if( 
 #define while while(
+#define for for(
+#define elif else if 
+
 #define then )
 #define begin {
 #define end }
-#define elif else if 
-#define var auto 
 
 #endif
