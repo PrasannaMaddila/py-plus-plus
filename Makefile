@@ -18,12 +18,15 @@ clean:
 
 syn: 
 	@echo "Generating a new syntaxer."
-	$(CC) $(SYN).cpp $(FLAGS) -o $(SYN).o 
+	$(CC) $(SYN).cpp $(FLAGS) -o $(SYN)
 	./$(SYN).o $(FNAME).cpp
 
 file: 
+	@echo "Cleaning file"
+	sed "s/\s\+//g" $(FILE).cpp
+	
 	@echo "Running syntaxer on $(FILE).cpp ... "
-	./$(SYN).o $(FILE).cpp
+	./$(SYN) $(FILE).cpp
 	
 	@echo "Now compiling $(FILE).cpp ..."
 	$(CC) temp_$(FILE).cpp $(FLAGS) -o $(FILE).o
