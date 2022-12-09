@@ -46,4 +46,10 @@ leave your keyboard ever again! That's really the goal, in the end.
 # include "p++.h"
 ```
 
-and you're good to go!
+and you're good to go! When you're compiling, use 
+
+```
+make file FILE="<your_filename_here>"
+```
+
+to generate the right object file. 
