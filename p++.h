@@ -5,6 +5,8 @@
 # include <vector>
 # include <algorithm>
 # include <memory>
+# include <string>
+# include <ranges>
 
 // for a lot of syntactic sugar 
 using namespace std; 
