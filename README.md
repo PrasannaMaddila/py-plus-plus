@@ -1,4 +1,4 @@
-# P++
+# Py++
 
 This is the Python/Pascal inspired C++ syntax. All of this is just syntactic
 sugar, aimed to give any users of the header a fun new syntax to play with. For
